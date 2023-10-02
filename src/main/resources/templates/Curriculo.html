@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body {
+            background-color: #ffb6c1;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            padding: 70px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .curriculo-header {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        img{
+            width: 200px;
+            height: 250px;
+            margin-right: 40px;
+            margin-left: 10px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h3 {
+            color: #dc143c;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="curriculo-header">
+            <img src="https://media.licdn.com/dms/image/D5603AQGX0kQZsEOeEw/profile-displayphoto-shrink_400_400/0/1677963980373?e=1701302400&v=beta&t=KUQ2X7i-Xt4zKYmq2YKjL9qVL8zYPrxL2L8QMWjGbQI">
+            <div>
+                <h1 th:text="${nome}">nome</h1>
+                <p th:text="${skil}">skil</p>
+
+                <p th:text="${telefone}">telefone</p>
+                <p th:text="${email}">email</p>
+                <p th:text="${idade}">idade</p>
+                <p th:text="${civil}">civil</p>
+            </div>
+        </div>
+        <div class="curriculo-corpo">
+            <h3>Objetivo</h3>
+            <p th:text="${objetivo}">objetivo</p>
+
+            <h3>Cursos e Treinamentos</h3>
+            <p th:text="${cursos}">cursos</p>
+
+            <h3>Idioma</h3>
+            <p th:text="${idioma}">idioma</p>
+
+            <h3>Github</h3>
+            <p th:text="${github}">github</p>
+        </div>
+    </div>
+</body>
+</html>
